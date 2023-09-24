@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <title>書籍検索APP</title>
+</head>
+<body>
+    <h1>書籍検索アプリ</h1>
+    <form id="search_form">
+        <input type="text" id="search_text" class="input_form">
+        <button id="search_btn" class="search_btn">検索</button>
+    </form>
+    
+    <div class="hisotry_area">
+        <div>検索履歴：</div>
+        <div id="history_area"></div>
+    </div>
+
+    <hr>
+
+    <table id="search_result">
+        <tbody id="search_result">
+        </tbody>
+    </table>
+
+    <!-- <div id="res"></div> -->
+    <template id="bookInfo">
+        <div class="book_view">
+            <h2 id="title"></h2>
+    
+            <div class="pic_view">
+                <img id="pic">
+            </div>
+    
+            <div class="meta_view">
+                <div id="author"></div>
+                <div id="publication"></div>
+                <div id="publisher"></div>
+            </div>
+
+            <div>【あらすじ】</div>
+            <div id="overview" class="overview" ></div>
+            
+            <hr>
+        </div>
+    </template>
+
+    <template id="history_link">
+        <!-- １．クリックできるようにする divからhrefに変更 -->
+        <!-- ２．検索履歴のワードを取得する textContentをonclickイベントに渡す -->
+        <a href="#" id="text" class="his_txt" onclick="re_searchBook(textContent)"></div>
+    </template>
+
+    <script src="index.js"></script>
+</body>
+</html>
